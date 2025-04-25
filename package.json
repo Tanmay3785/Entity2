@@ -1,11 +1,13 @@
 {
-  "name": "entity",
-  "version": "1.0.0",
+  "name": "entity2",
+  "version": "1.0.18",
   "description": "Entity",
-  "main": "index.js",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
     "build": "npx tsc",
-    "start": "node -r dotenv/config dist/index.js"
+    "start": "node build/index.js",
+    "publish:build": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
@@ -25,7 +27,7 @@
     "@types/node": "^22.14.1",
     "typescript": "^5.8.3"
   },
-  "private": false,
+  "private": true,
   "publishConfig": {
     "access": "public"
   }
